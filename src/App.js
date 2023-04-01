@@ -9,11 +9,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      playlists: playlists,
-      artist: "",
-      title: "",
-      time: "0:00",
-      favSongs: [],
+      playlists: playlists, //this is to refer to playlist
+      artist: "", //this is set the artist as empty
+      title: "", //this is set the title as empty
+      time: "0:00", //this is set the time as default
+      favSongs: [], //this is to add in the fav song!
     };
 
     //this is binding the handleChange with constructor so that setState is referring to constructor
@@ -22,8 +22,10 @@ class App extends Component {
     //this is binding the handleSubmit with constructor so that setState is referring to constructor
     this.handleSubmit = this.handleSubmit.bind(this);
 
+    //this is binding the addFavSongs with constructor so that setState is referring to constructor
     this.addFavSongs = this.addFavSongs.bind(this);
 
+    //this is binding the deleteSong with constructor so that setState is referring to constructor
     this.deleteSong = this.deleteSong.bind(this);
   }
 
